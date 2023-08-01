@@ -14,9 +14,10 @@ const Searcher = () => {
           </div>
         </div>
       </div>
-
-      <input className='searcher__input' type="text" placeholder='NOMBRE DE USUARIO' />
-
+      <form className='searcher__form' >
+        <input className='searcher__input' type="text" placeholder='NOMBRE DE USUARIO' />
+        <button className="searcher__btn" type='submit'><i class='bx bx-search'></i></button>
+      </form>
     </section>
   );
 };

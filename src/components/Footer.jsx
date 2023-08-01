@@ -15,12 +15,12 @@ const Footer = ({ pagNumb, setPagNumb, paginationUsers }) => {
   return (
     <ul className='pagination__list'>
 
-      {pagNumb <= 0 ? <></> : <li onClick={prev} className='pagination__item'>Prev</li>}
+      {pagNumb <= 0 ? <></> : <li onClick={prev} className='pagination__item arrow'><i class='bx bx-chevron-left'></i></li>}
 
       {paginationUsers.map((num, index) => (
-        <li key={index} onClick={selectNum} className='pagination__item'>{index + 1}</li>
+        <li key={index} onClick={selectNum} className={`pagination__item ${index === pagNumb ? 'active' : ''}`}>{index + 1}</li>
       ))}
-      {pagNumb >= 4 ? <></> : <li onClick={next} className='pagination__item'>Next</li>}
+      {pagNumb >= 4 ? <></> : <li onClick={next} className='pagination__item arrow'><i class='bx bx-chevron-right'></i></li>}
     </ul>
   );
 };

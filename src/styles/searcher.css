@@ -46,4 +46,24 @@
   padding: 1em;
   min-height: 2.5em;
   border-radius: 2em;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.searcher__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.searcher__input {
+  padding-left: 3.5em;
+}
+.searcher__input:focus {
+  outline: none;
+}
+.searcher__btn {
+  position: relative;
+  right: 2.5em;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
