@@ -21,3 +21,6 @@
   width: 100%;
   background-color: #d8e0e7;
 }
+.user__name {
+  padding-bottom: 3em;
+}
