@@ -1,0 +1,22 @@
+.users__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  width: 100%;
+}
+
+.user__card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: nowrap;
+  max-width: 500px;
+}
+
+.user__img__container {
+  max-width: 50%;
+  width: 100%;
+  background-color: #d8e0e7;
+}
