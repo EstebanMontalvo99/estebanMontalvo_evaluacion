@@ -1,3 +1,6 @@
+:root {
+  --orange-line-bg: #ffd393;
+}
 .header {
   width: 100%;
   max-height: 14em;
@@ -7,5 +10,5 @@
 }
 .orange__line {
   min-height: 8px;
-  background-color: #ffd393;
+  background-color: var(--orange-line-bg);
 }

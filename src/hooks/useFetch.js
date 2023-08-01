@@ -10,9 +10,6 @@ const useFetch = () => {
       .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
   };
-  /* fetch(base_url)
-    .then(res=>(res.json()))
-    .then(data=>setUsers(data)) */
 
   return { users, getAllUsers };
 };

@@ -1,7 +1,15 @@
+:root {
+  --pagination-list-color: #c0c0c0;
+  --arrows-bg: #eaeaea;
+  --pagination-hover-bg: #e6e6e6;
+  --pagination-hover-color: black;
+  --active-bg: #3399fe;
+  --active-color: #e0f3fb;
+}
 .pagination__list {
   display: flex;
   padding: 2em;
-  color: #c0c0c0;
+  color: var(--pagination-list-color);
 }
 .pagination__item {
   padding: 0.5em 0.8em;
@@ -9,13 +17,13 @@
   border-radius: 0.3em;
 }
 .arrow {
-  background-color: #eaeaea;
+  background-color: var(--arrows-bg);
 }
 .pagination__item:hover {
-  background-color: #e6e6e6;
-  color: black;
+  background-color: var(--pagination-hover-bg);
+  color: var(--pagination-hover-color);
 }
 .active {
-  background-color: #3399fe;
-  color: #e0f3fb;
+  background-color: var(--active-bg);
+  color: var(--active-color);
 }
