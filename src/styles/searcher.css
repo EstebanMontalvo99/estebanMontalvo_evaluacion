@@ -1,7 +1,7 @@
 .searcher {
   width: 100%;
   background-color: #dce0eb;
-  min-height: 14em;
+  min-height: 18em;
   margin: 4em;
   display: flex;
   align-items: center;
@@ -11,12 +11,20 @@
 }
 .searcher__box {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   width: 50%;
 }
+.searcher__butterfly {
+  width: 40px;
+  min-height: 40px;
+}
+.searcher__title {
+  text-align: center;
+}
 .blue__ball {
-  height: 50px;
   width: 50px;
+  height: 53px;
   background-color: #225076;
   border-radius: 50%;
   display: flex;
@@ -24,8 +32,8 @@
   align-items: center;
 }
 .mustard__ball {
-  height: 30px;
   width: 30px;
+  height: 30px;
   background-color: #e9b47d;
   border-radius: 50%;
   display: flex;
@@ -33,37 +41,72 @@
   align-items: center;
 }
 .black__ball {
-  height: 10px;
   width: 10px;
+  height: 10px;
   background-color: #282224;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.searcher__input {
-  width: 25%;
-  padding: 1em;
-  min-height: 2.5em;
-  border-radius: 2em;
-  border: none;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
+
 .searcher__form {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.searcher__greenBall {
+  max-width: 1.7em;
+  position: relative;
+  left: 2.5em;
+  z-index: 300;
+}
+.searcher__searchBar {
+  width: 50%;
+  position: relative;
+  z-index: 200;
 }
 .searcher__input {
-  padding-left: 3.5em;
+  width: 100%;
+  min-height: 4em;
+  height: 100%;
+  padding: 0 3.5em;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: inherit;
+  z-index: 200;
 }
 .searcher__input:focus {
   outline: none;
 }
+
 .searcher__btn {
   position: relative;
+  width: 2.5em;
+  border-radius: 2em;
+  font-size: 1.5rem;
   right: 2.5em;
   border: none;
   background-color: inherit;
   cursor: pointer;
+  z-index: 300;
+}
+.searcher__search__list {
+  width: 100%;
+  position: absolute;
+  top: 1.8em;
+  padding-top: 1.6em;
+  background-color: white;
+  z-index: 100;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+.searcher__search__list__item {
+  padding: 1em 3.5em;
+  cursor: pointer;
+}
+.searcher__search__list__item:hover {
+  background-color: #dce0eb;
 }

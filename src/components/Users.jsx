@@ -7,7 +7,6 @@ const Users = ({ user }) => {
   const formatDateOfBirth = (date) => {
     return format(new Date(date), "dd 'de' MMMM 'del' yyyy", { locale: es });
   };
-
   return (
     <article className='user__card'>
       <div className='user__img__container'>
