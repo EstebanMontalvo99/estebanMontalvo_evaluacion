@@ -1,6 +1,9 @@
 import React from 'react';
 import "../styles/searcher.css";
 const Searcher = () => {
+  const searchUser = (e) => {
+
+  };
   return (
     <section className='searcher'>
       <div className='searcher__box'>
@@ -11,7 +14,9 @@ const Searcher = () => {
           </div>
         </div>
       </div>
+
       <input className='searcher__input' type="text" placeholder='NOMBRE DE USUARIO' />
+
     </section>
   );
 };

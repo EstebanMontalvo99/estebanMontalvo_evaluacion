@@ -1,8 +1,13 @@
 import React from 'react';
-//nombre,imagen,correo eelctronico,genero,numero de telefono,decha de nacimiento,info de empleo,direccion,suscripcion
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale'; // Importa el localizador en español
+
 import "../styles/users.css";
 const Users = ({ user }) => {
-  console.log(user);
+  const formatDateOfBirth = (date) => {
+    return format(new Date(date), "dd 'de' MMMM 'del' yyyy", { locale: es });
+  };
+
   return (
     <article className='user__card'>
       <div className='user__img__container'>
@@ -14,7 +19,7 @@ const Users = ({ user }) => {
           <li className='user__list__item'>{user.email}</li>
           <li className='user__list__item'>{user.gender}</li>
           <li className='user__list__item'>{user.phone_number}</li>
-          <li className='user__list__item'>{user.date_of_birth}</li>
+          <li className='user__list__item'> {formatDateOfBirth(user.date_of_birth)}</li>
           <li className='user__list__item'>employment: {user.employment.title}</li>
           <li className='user__list__item'>address: {`${user.address.city} ${user.address.street_address}`}</li>
           <li className='user__list__item'>subscription: {user.subscription.plan}</li>

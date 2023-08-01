@@ -1,17 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
-import axios from 'axios';
 import Header from './components/Header';
 import Users from './components/Users';
 import Searcher from './components/Searcher';
+import Footer from './components/Footer';
+import useFetch from "./hooks/useFetch";
 
 function App() {
 
-  const [users, setUsers] = useState();
+  const { users, getAllUsers } = useFetch();
   useEffect(() => {
-    axios.get("https://random-data-api.com/api/v2/users?size=6")
-      .then(res => setUsers(res.data));
+    getAllUsers();
+
   }, []);
+  console.log(users);
 
   return (
     <div className='main__container'>
@@ -22,6 +24,7 @@ function App() {
           <Users key={user.uid} user={user} />
         ))}
       </section>
+      <Footer />
     </div>
   );
 }
