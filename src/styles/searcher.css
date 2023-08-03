@@ -119,3 +119,6 @@
 .searcher__search__list__item:hover {
   background-color: var(--search-list-item-hover-bg);
 }
+.searcher__found {
+  position: absolute;
+}

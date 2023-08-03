@@ -1,8 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "../styles/searcher.css";
 
-const Searcher = ({ users, setSelectedUser }) => {
+const Searcher = ({ users, setSelectedUser, selectedUser }) => {
   const [filteredUsers, setFilteredUsers] = useState([]);
+  const [isFound, setIsFound] = useState(true);
+  const [selectedUserChanhge, setSelectedUserChanhge] = useState(false);
   const inputRef = useRef(null);
 
   const handleChange = (e) => {
@@ -19,7 +21,18 @@ const Searcher = ({ users, setSelectedUser }) => {
     e.preventDefault();
     setSelectedUser(users.find(user => (user.username === inputRef.current.value)));
     inputRef.current.value = "";
+    setSelectedUserChanhge(!selectedUserChanhge);
   };
+
+  useEffect(() => {
+    if (!selectedUser) {
+      setIsFound(false);
+    }
+
+    setTimeout(() => {
+      setIsFound(true);
+    }, 3000);
+  }, [selectedUserChanhge]);
 
   return (
     <section className='searcher'>
@@ -48,6 +61,11 @@ const Searcher = ({ users, setSelectedUser }) => {
 
         <button className="searcher__btn" type='submit'><i className='bx bx-search'></i></button>
       </form>
+      {
+        isFound ? ""
+          :
+          <h2 className='searcher__found'>User not found</h2>
+      }
     </section>
   );
 };

@@ -14,6 +14,7 @@ function App() {
 
   const [pagNumb, setPagNumb] = useState(0);
 
+
   useEffect(() => {
     getAllUsers();
   }, []);
@@ -32,7 +33,7 @@ function App() {
     <div className='main__container'>
       <Header />
 
-      <Searcher users={users} setSelectedUser={setSelectedUser} />
+      <Searcher users={users} setSelectedUser={setSelectedUser} selectedUser={selectedUser} />
 
 
 
